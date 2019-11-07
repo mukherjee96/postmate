@@ -43,11 +43,13 @@ You can swipe right on a template to edit/delete it. Tap on the template to open
 
 <a name="pwa"/>
 
-## What is a Progressive Web App?
+## What is a Progressive Web App (PWA)?
 
-PostMate is a [Progressive Web App (PWA)](https://developers.google.com/web/progressive-web-apps). PWAs are web applications that can be installed on any device that can run a supported web browser like Google Chrome or Mozilla Firefox. Therefore, PostMate runs in your web browser just like a website and can be installed on your laptop/smartphone if you feel like!
+PWAs are web applications which run on regular web browsers like Google Chrome and Mozilla Firefox. They set themselves apart from normal websites or web apps as can be installed on any device, just like a native app.
 
-I decided to go with PWA technology instead of targeting native platforms like Android or iOS because, as mentioned above, PWAs can be deployed to a wide number of computing platforms without requiring the source code to be rewritten for every platform.
+PostMate is a Progressive Web App and therefore runs in your web browser just like a website and you can install it on your laptop/smartphone if you feel like!
+
+I decided to go with the PWA technology instead of targeting native platforms like Android or iOS because, as mentioned above, PWAs can be deployed to a wide number of computing platforms without requiring the source code to be rewritten for every platform.
 
 <a name="installation"/>
 
