@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="tertiary" mode="ios">
+    <ion-title>
+      PostMate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item id="top">
+    <ion-label position="stacked">Template Name</ion-label>
+    <ion-input
+      type="text"
+      autofocus="true"
+      name="templateName"
+      [(ngModel)]="name"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Header</ion-label>
+    <ion-textarea
+      auto-grow="true"
+      wrap="soft"
+      name="header"
+      [(ngModel)]="header"
+    ></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Footer</ion-label>
+    <ion-textarea
+      auto-grow="true"
+      wrap="hard"
+      name="footer"
+      [(ngModel)]="footer"
+    ></ion-textarea>
+  </ion-item>
+  <section id="createBtn">
+    <ion-button
+      expand="block"
+      color="tertiary"
+      (click)="addTemplate(this.name, this.header, this.footer)"
+      >Create Template</ion-button
+    >
+    <p id="warning" class="ion-text-center">
+      Do not store sensitive information like contact info, bank details,
+      passwords and PINs.
+    </p>
+  </section>
+  <section id="help">
+    <h5>Header</h5>
+    <p>
+      The Header content will be prepended to your post. It can be used to set
+      text that always goes on the top part of your post.
+    </p>
+    <h5>Footer</h5>
+    <p>
+      The Footer content will be appended to your post. It's useful for setting
+      text that belongs at the bottom of your post.
+    </p>
+  </section>
+</ion-content>

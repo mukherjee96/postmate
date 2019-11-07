@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="tertiary" mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      PostMate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-template #spinner>
+    <div class="ion-text-center ion-padding">
+      <ion-spinner></ion-spinner>
+    </div>
+  </ng-template>
+
+  <ng-container *ngIf="template$ | async as templateData; else spinner">
+    <div
+      class="ion-text-center ion-padding-start ion-padding-end"
+      id="templateName"
+    >
+      <h1>
+        {{ templateData.name }}
+      </h1>
+    </div>
+    <ion-item lines="full">
+      <ion-label position="stacked">Header</ion-label>
+      <ion-textarea readonly auto-grow="true" [value]="templateData.header">
+      </ion-textarea>
+    </ion-item>
+
+    <ion-item class="ion-padding-top" lines="full">
+      <ion-label position="stacked">Enter Body</ion-label>
+      <ion-textarea
+        autofocus
+        auto-grow="true"
+        wrap="soft"
+        name="body"
+        placeholder="Type the body of the post here and click the button below to copy."
+        [(ngModel)]="body"
+      ></ion-textarea>
+    </ion-item>
+
+    <ion-item class="ion-padding-top" lines="full">
+      <ion-label position="stacked">Footer</ion-label>
+      <ion-textarea readonly auto-grow="true" [value]="templateData.footer">
+      </ion-textarea>
+    </ion-item>
+
+    <section id="copyBtn">
+      <ion-button
+        expand="block"
+        color="tertiary"
+        (click)="copyPostHandler(post)"
+      >
+        <ion-icon slot="start" name="copy"></ion-icon>Copy</ion-button
+      >
+    </section>
+
+    <ion-item class="ion-padding-bottom" lines="none">
+      <ion-textarea
+        #post
+        id="post"
+        auto-grow="true"
+        wrap="soft"
+        name="post"
+        [(ngModel)]="
+          body
+            ? templateData.header + '\n' + body + '\n' + templateData.footer
+            : templateData.header + '\n' + templateData.footer
+        "
+      ></ion-textarea>
+    </ion-item>
+  </ng-container>
+</ion-content>

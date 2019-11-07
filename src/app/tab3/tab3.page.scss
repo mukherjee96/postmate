@@ -1,0 +1,27 @@
+#profile {
+  background: #f3e9fc;
+  padding: 1rem 0 1rem 0;
+}
+
+img {
+  border: 5px solid rgb(219, 175, 219);
+  border-radius: 100%;
+  height: 10rem;
+  width: 10rem;
+}
+
+// Add padding on ion-content for bigger screens
+// Retina screens
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  ion-content {
+    --padding-start: 20vw;
+    --padding-end: 20vw;
+  }
+}
+// Non-retina
+@media screen and (min-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+  ion-content {
+    --padding-start: 20vw;
+    --padding-end: 20vw;
+  }
+}

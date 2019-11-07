@@ -1,0 +1,55 @@
+ion-item {
+  --padding-start: 5px;
+  --padding-end: 5px;
+  --inner-padding-start: 10px;
+  --inner-padding-end: 10px;
+  --background: rgb(255, 255, 255);
+  --background-hover: rgb(237, 233, 255);
+  --background-activated: rgb(224, 219, 248);
+  --background-focused: rgb(224, 219, 248);
+  --ripple-color: rgb(224, 219, 248);
+  --border-color: rgb(200, 198, 206);
+}
+
+ion-searchbar {
+  --background: rgb(239, 237, 252);
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+img {
+  width: 20em;
+  height: auto;
+  padding: 2em;
+}
+
+#noContentText {
+  font-size: 1em;
+}
+
+ion-item-sliding :hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+ion-item-sliding :active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+// Add padding on ion-content for bigger screens
+// Retina screens
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  ion-content {
+    --padding-start: 20vw;
+    --padding-end: 20vw;
+  }
+}
+// Non-retina
+@media screen and (min-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+  ion-content {
+    --padding-start: 20vw;
+    --padding-end: 20vw;
+  }
+}

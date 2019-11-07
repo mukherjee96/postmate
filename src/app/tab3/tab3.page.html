@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="tertiary" mode="ios">
+    <ion-title>
+      PostMate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-template #spinner>
+    <div class="ion-text-center ion-padding">
+      <ion-spinner></ion-spinner>
+    </div>
+  </ng-template>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div
+          class="ion-text-center"
+          id="profile"
+          *ngIf="userData | async as user; else spinner"
+        >
+          <img [src]="user.photoURL" alt="Display picture" />
+          <h3>{{ user.displayName }}</h3>
+          <p>{{ user.email }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item (click)="signOutHandler()" button>
+      <ion-icon name="log-out" slot="start"></ion-icon>
+      <ion-label>Sign out</ion-label>
+    </ion-item>
+    <ion-item (click)="showAbout()" button>
+      <ion-icon name="information-circle" slot="start"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-item>
+    <ion-item button (click)="sharePostMate()">
+      <ion-icon name="share" slot="start"></ion-icon>
+      <ion-label>Share PostMate with friends</ion-label>
+    </ion-item>
+    <ion-item href="mailto:aritramukherjee100@gmail.com?Subject=PostMate">
+      <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-label>Contact, Feedback, Feature Request</ion-label>
+    </ion-item>
+    <ion-item (click)="deleteAccountHandler()" button>
+      <ion-icon name="trash" slot="start"></ion-icon>
+      <ion-label>Delete Account</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

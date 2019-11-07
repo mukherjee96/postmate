@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="tertiary" mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      PostMate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-template #spinner>
+    <div class="ion-text-center ion-padding">
+      <ion-spinner></ion-spinner>
+    </div>
+  </ng-template>
+  <ng-container *ngIf="templateData; else spinner">
+    <ion-item id="top">
+      <ion-label position="floating">Template Name</ion-label>
+      <ion-input
+        type="text"
+        name="templateName"
+        [(ngModel)]="templateData.name"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Header</ion-label>
+      <ion-textarea
+        auto-grow="true"
+        wrap="soft"
+        name="header"
+        [(ngModel)]="templateData.header"
+      ></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Footer</ion-label>
+      <ion-textarea
+        auto-grow="true"
+        wrap="hard"
+        name="footer"
+        [(ngModel)]="templateData.footer"
+      ></ion-textarea>
+    </ion-item>
+    <section id="updateBtn">
+      <ion-button expand="block" color="tertiary" (click)="updateTemplate()"
+        >Update Template</ion-button
+      >
+    </section>
+  </ng-container>
+</ion-content>

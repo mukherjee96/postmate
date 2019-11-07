@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="tertiary" mode="ios">
+    <ion-title>
+      PostMate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-template #spinner>
+    <div class="ion-text-center ion-padding">
+      <ion-spinner></ion-spinner>
+    </div>
+  </ng-template>
+
+  <ion-searchbar
+    #search
+    (ionChange)="searchHandler()"
+    type="text"
+    debounce="500"
+    mode="ios"
+    placeholder="Search Templates"
+    show-cancel-button="focus"
+    animated
+  ></ion-searchbar>
+  <ng-container *ngIf="templates$ | async as templates; else spinner">
+    <div
+      *ngIf="templates.length === 0"
+      class="ion-text-center ion-padding"
+      id="noContent"
+    >
+      <img src="../../assets/images/cat-sleeping.png" />
+      <h3 class="ion-padding-top" id="noContentText">
+        It's empty here! Tap Create below to create your first template.
+      </h3>
+    </div>
+    <ion-list lines="inset" #listRef>
+      <ion-item-sliding *ngFor="let template of templates">
+        <ion-item
+          mode="ios"
+          button
+          [routerLink]="['/tabs/templates/make-post', template.id]"
+        >
+          <ion-label>
+            <h2>
+              {{ template.name }}
+            </h2>
+            <p>Header: {{ template.header }}</p>
+            <p>Footer: {{ template.footer }}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="start">
+          <ion-item-option
+            color="danger"
+            (click)="presentDeleteAlert(template.id)"
+          >
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+          <ion-item-option color="tertiary" (click)="editHandler(template.id)">
+            <ion-icon slot="icon-only" name="create"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ng-container>
+</ion-content>

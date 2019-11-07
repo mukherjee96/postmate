@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+ion-content {
+  --background: #f3e9fc;
+}
+
+ion-slides {
+  height: 100%;
+}
+
+ion-slide {
+  height: 100%;
+  flex-direction: column;
+}
+
+img {
+  width: 20em;
+  height: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+h1 {
+  font-family: 'Overpass', sans-serif;
+  color: #000124;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #000124;
+}
+
+ion-content {
+  cursor: grab;
+}
+
+ion-content:active {
+  cursor: grabbing;
+}
+
+.next {
+  font-size: 1.5em;
+  background: #e2ccf7;
+  border-radius: 10px;
+  padding: 3px 6px;
+  color: #45345398;
+}
+
+.next:hover {
+  cursor: pointer;
+}
+
+#login p {
+  padding: 0 1em;
+}
+
+#status {
+  font-size: 15px;
+  color: #7044ff;
+}
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  img {
+    height: 40vh;
+    width: auto;
+  }
+}
