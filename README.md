@@ -63,7 +63,7 @@ I have an excellent article [explaining](https://geekyminds.co.in/what-are-progr
 
 ### Installing PostMate on iOS
 The installation method is a little more complex on iOS (thanks to Apple). 🙄
-1. Visit PostMate via Safari.
+1. Visit [PostMate](https://postmate-progressive.web.app) via Safari.
 2. Follow the instructions on this excellent and short [video tutorial](https://www.youtube.com/watch?v=bV8xE6lOdoY).
 
 ### Installing PostMate on PC/Mac
