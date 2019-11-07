@@ -9,18 +9,28 @@
 <ion-content scroll-y="false" fullscreen>
   <ion-slides [options]="slideOpts" #slides>
     <ion-slide class="ion-justify-content-center">
-      <img src="../../assets/images/one.png" />
+      <img
+        loading="auto"
+        src="../../assets/images/one.png"
+        alt="Social media posts"
+        style="height:auto; width:20em;"
+      />
       <h1>Welcome to PostMate</h1>
       <p>
-        Do you often publish posts with repetitive content (<i>#hashtags</i> for
-        example) on social media?
+        Do you often publish posts with repetitive content (like
+        <i>#hashtags</i> ) on social media?
       </p>
       <div class="ion-text-center" (click)="next()">
         <ion-icon name="arrow-forward" class="next"></ion-icon>
       </div>
     </ion-slide>
     <ion-slide class="ion-justify-content-center">
-      <img src="../../assets/images/two.png" />
+      <img
+        loading="lazy"
+        src="../../assets/images/two.png"
+        alt="Templates in PostMate"
+        style="height:auto; width:20em;"
+      />
       <h1>Say Hi to Templates</h1>
       <p>
         PostMate lets you create post templates consisting of headers and
@@ -31,7 +41,12 @@
       </div>
     </ion-slide>
     <ion-slide class="ion-justify-content-center">
-      <img src="../../assets/images/three.png" />
+      <img
+        loading="lazy"
+        src="../../assets/images/three.png"
+        alt="Using templates in PostMate"
+        style="height:auto; width:20em;"
+      />
       <h1>Reuse your Templates</h1>
       <p>
         Just type in the body of your post and generate the rest from your
@@ -42,7 +57,12 @@
       </div>
     </ion-slide>
     <ion-slide class="ion-justify-content-center">
-      <img src="../../assets/images/four.png" />
+      <img
+        loading="lazy"
+        src="../../assets/images/four.png"
+        alt="Temlates sync across devices"
+        style="height:auto; width:20em;"
+      />
       <h1>Optimize Your Workflow</h1>
       <p>
         Templates sync across all your devices helping you engage more
