@@ -11,7 +11,7 @@
 <a name="problem"/>
 
 ## What is PostMate trying to solve?
-As part of the activities of running [GeekyMinds](https://geekyminds.co.in), my tech blog, we post some or the other content everyday on various social media platforms like Facebook, Instagram, Twitter, Tumblr, Pinterest, etc. The format of our posts differ from content to content, platform to platform. 
+As part of the activities of running [GeekyMinds](https://geekyminds.co.in), my tech blog, we post content everyday on various social media platforms like Facebook, Instagram, Twitter, Tumblr, Pinterest, etc. The format of our posts differs from content to content, platform to platform.
 
 For example, our Revisit C++ series requires a particular set of hashtags related to C++ and a particular header text (for example, #RevisitCPP Day 15) that's part of every post. On the other hand, a regular post where I'm sharing a link to an article from my blog will have a different header and set of tags.
 
@@ -23,7 +23,7 @@ Remembering or keeping a physical note of so many types of formats is difficult.
 
 ## How does PostMate solve this?
 
-PostMate enables you to create post templates. Each template can have a header and a footer. The Header can be used to set text that always goes at the top of your post. The Footer is ideal for setting text that goes at the end of your posts, like set of hashtags on Instagram.
+PostMate enables you to create post templates. Each template can have a header and a footer. The Header can be used to set text that always goes at the top of your post. The Footer is ideal for setting text that goes at the end of your posts, like a set of hashtags on Instagram.
 
 Templates only hold the static or the repetitive parts of your posts. You can set the header or the footer or both, as you need.
 
@@ -49,7 +49,7 @@ PWAs are web applications which run on regular web browsers like Google Chrome a
 
 PostMate is a Progressive Web App and therefore runs in your web browser just like a website and you can install it on your laptop/smartphone if you feel like!
 
-I decided to go with the PWA technology instead of targeting native platforms like Android or iOS because, as mentioned above, PWAs can be deployed to a wide number of computing platforms without requiring the source code to be rewritten for every platform.
+I decided to go with PWA technology instead of targeting native platforms like Android or iOS because, as mentioned above, PWAs can be deployed to a wide number of computing platforms without requiring the source code to be rewritten for every platform.
 
 <a name="installation"/>
 
@@ -60,8 +60,8 @@ I have an excellent article [explaining](https://geekyminds.co.in/what-are-progr
 ### Installing PostMate on Android
 1. Visit [PostMate](https://postmate-progressive.web.app)
 2. After a moment, Chrome/Firefox will prompt you with 'Add PostMate to home screen'.
-3. Alternatively, tap on the three-dot menu on Chrome and tap 'Add to home screen'.
 3. Click on the prompt and click Add.
+4. Alternatively, tap on the three-dot menu in Chrome and tap 'Add to home screen'.
 
 ### Installing PostMate on iOS
 The installation method is a little more complex on iOS (thanks to Apple). 🙄
@@ -77,4 +77,4 @@ The installation method is a little more complex on iOS (thanks to Apple). 🙄
 
 ## Are you a web developer?
 
-PostMate just entered public beta and contributors are welcome! I'll be glad to hear about any glitches/bugs/feature requests that anyone might have. Submit them as a issue [here](https://github.com/mukherjee96/postmate/issues/new).
+PostMate just entered public beta and contributors are welcome! I'll be glad to hear about any glitches/bugs/feature requests that anyone might have. Submit them as an issue [here](https://github.com/mukherjee96/postmate/issues/new).
