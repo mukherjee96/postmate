@@ -78,3 +78,11 @@ The installation method is a little more complex on iOS (thanks to Apple). 🙄
 ## Are you a web developer?
 
 PostMate just entered public beta and contributors are welcome! I'll be glad to hear about any glitches/bugs/feature requests that anyone might have. Submit them as an issue [here](https://github.com/mukherjee96/postmate/issues/new).
+
+## License
+
+> GNU GPL V3
+    
+## Credits
+
+* Created by [Aritra Mukherjee](https://twitter.com/mukherjee_dev96)
